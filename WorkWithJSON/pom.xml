@@ -11,15 +11,100 @@
   <url>http://maven.apache.org</url>
 
   <properties>
+    <jdk.version>1.8</jdk.version>
+    <jre.version>1.8.0_144</jre.version>
+    
+    <product.version>0.1-SNAPSHOT</product.version>
+    <our.lib.groupIds.property>org.itstep</our.lib.groupIds.property>
+    <output.directory>../build</output.directory>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  
+  
+    <maven.source.plugin.version>2.4</maven.source.plugin.version>
+    <maven.javadoc.plugin.version>2.10.3</maven.javadoc.plugin.version>
+    <maven.resources.plugin.version>2.7</maven.resources.plugin.version>
+    <exec.maven.plugin.version>1.4.0</exec.maven.plugin.version>
+    <jar.plugin.version>2.6</jar.plugin.version>
+    <dependency.plugin.version>2.10</dependency.plugin.version>
+    <compiler.plugin.version>3.3</compiler.plugin.version>
+  
+    <junit.version>4.12</junit.version>
+    <lombok.version>1.16.16</lombok.version>
+    <spring.version>4.3.7.RELEASE</spring.version>
+    <spring.boot.version>1.5.2.RELEASE</spring.boot.version>
+    
   </properties>
 
   <dependencies>
+     <dependency>
+        <groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>${spring.version}</version>
+		<exclusions>
+			<exclusion>
+				<artifactId>commons-logging</artifactId>
+				<groupId>commons-logging</groupId>
+			</exclusion>
+		</exclusions>
+     </dependency>
+     <dependency>
+       <groupId>org.springframework</groupId>
+       <artifactId>spring-context</artifactId>
+       <version>${spring.version}</version>
+       <exclusions>
+		 <exclusion>
+			 <artifactId>commons-logging</artifactId>
+			 <groupId>commons-logging</groupId>
+		  </exclusion>
+       </exclusions>
+    </dependency>
+        
+	 <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-test</artifactId>
+		<version>${spring.version}</version>
+		<scope>test</scope>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-autoconfigure</artifactId>
+		<version>${spring.boot.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-test</artifactId>
+		<version>${spring.boot.version}</version>
+		<scope>test</scope>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-data-jpa</artifactId>
+		<version>${spring.boot.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework.data</groupId>
+		<artifactId>spring-data-jpa</artifactId>
+		<version>1.11.1.RELEASE</version>
+	</dependency>
+  
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+    
+     <dependency>
+       <groupId>org.projectlombok</groupId>
+       <artifactId>lombok</artifactId>
+       <version>${lombok.version}</version>
+       <scope>provided</scope>
+     </dependency>
+    
   </dependencies>
 </project>

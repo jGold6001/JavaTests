@@ -1,0 +1,10 @@
+{
+  "id": 34567,
+  "fullName": "Jay Goldenko",
+  "dateBirthday": "1990-10-06",
+  "userContacts": {
+    "eMail": "jgold6001@gmail.com",
+    "phone": "0738763456",
+    "address": "Ukraine, Kiev, st. Mayak 123"
+  }
+}

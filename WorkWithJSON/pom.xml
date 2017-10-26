@@ -119,5 +119,12 @@
 		<artifactId>jackson-databind</artifactId>
 		<version>${jackson.version}</version>
 	</dependency>
+	
+	<dependency>
+		<groupId>com.alibaba</groupId>
+		<artifactId>fastjson</artifactId>
+		<version>1.2.39</version>
+	</dependency>
+
   </dependencies>
 </project>

@@ -6,7 +6,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class UserContacts {
-	private String eMail;
+	private String email;
 	private String phone;
 	private String address;
 	
@@ -14,8 +14,8 @@ public class UserContacts {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public UserContacts(String eMail, String phone, String address) {
-		this.eMail = eMail;
+	public UserContacts(String email, String phone, String address) {
+		this.email = email;
 		this.phone = phone;
 		this.address = address;
 	}
@@ -23,7 +23,7 @@ public class UserContacts {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-	    	sb.append("	e-mail: " + getEMail() + "\n");
+	    	sb.append("	e-mail: " + getEmail() + "\n");
 	    	sb.append("	phone: " + getPhone() + "\n");
 	    	sb.append("	address: " + getAddress() + "\n");
 	    return sb.toString();

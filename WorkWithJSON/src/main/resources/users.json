@@ -1,10 +1,32 @@
-{
-  "id": 34567,
-  "fullName": "Jay Goldenko",
-  "dateBirthday": "1990-10-06",
-  "userContacts": {
-    "eMail": "jgold6001@gmail.com",
-    "phone": "0738763456",
-    "address": "Ukraine, Kiev, st. Mayak 123"
-  }
-}
+[	
+	{
+	  "id": 34567,
+	  "fullName": "Jay Goldenko",
+	  "dateBirthday": "1990-10-06",
+	  "userContacts": {
+		"email": "jgold6001@gmail.com",
+		"phone": "0738763456",
+		"address": "Ukraine, Kiev, st. Mayak 123"
+	  }
+	},
+	{
+	  "id": 34563,
+	  "fullName": "Rob Burbon",
+	  "dateBirthday": "1979-11-16",
+	  "userContacts": {
+		"email": "rob@gmail.com",
+		"phone": "0798063456",
+		"address": "USA, LosAngeles st. HZkakaya 7"
+	  }
+	},
+	{
+	  "id": 34568,
+	  "fullName": "Thomas Jefferson",
+	  "dateBirthday": "1289-03-22",
+	  "userContacts": {
+		"email": "thomas@gmail.com",
+		"phone": "0738790456",
+		"address": "GB, London st. Baker 90"
+	  }
+	}
+]

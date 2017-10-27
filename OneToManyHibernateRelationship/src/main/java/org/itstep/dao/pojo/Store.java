@@ -33,6 +33,7 @@ public class Store implements Serializable{
 	@Column(name="NAME", length=60, nullable = false)
 	private String name;
 	
+	//@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
 	@OneToMany(mappedBy = "store", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Product> products = new ArrayList<>();
 	

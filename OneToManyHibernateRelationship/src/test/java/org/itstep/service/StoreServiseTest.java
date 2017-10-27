@@ -42,33 +42,33 @@ public class StoreServiseTest {
 				new Product("Apple iPone 5", "Cellphone"),
 				new Product("Huawei MediaPad T3", "Table")
 		);
-		store.getProducts().add(products.get(0));
-		store.getProducts().add(products.get(1));
-		store.getProducts().add(products.get(2));
 	}
 	
+	
 	@Test
-	public void test1CreateOrUpdateStore() {
+	public void test2CreateOrUpdate() {
 		Store storeInDb = storeService.createOrUpdate(store);
-		assertEquals(storeInDb.getName(), store.getName());
-	}
-	
-	@Test
-	public void test2FindAllAndDeleteProducts() {
-		List<Product> productsInDb =  productService.getAll();
 		int count=0;
-		for (Product product : productsInDb) {
+		for (Product product : products) {
 			assertEquals(product.getName(), products.get(count).getName());
-			productService.delete(product.getId());
+			product.setStore(store);
+			productService.createOrUpdate(product);
 			count++;
 		}
 	}
 	
 	@Test
-	public void test3DeleteStore() {
+	public void test3DeleteAll() {
+		
 		List<Store> stores = storeService.getAll();
 		Store storeInDb = stores.get(0);
 		storeService.delete(storeInDb.getId());
+		
+		List<Product> productsInDb = productService.getAll();
+		for (Product product : productsInDb) {
+			productService.delete(product.getId());
+		}
+		
 	}
 	
 	

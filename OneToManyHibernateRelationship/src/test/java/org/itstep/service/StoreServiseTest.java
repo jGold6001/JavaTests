@@ -58,8 +58,12 @@ public class StoreServiseTest {
 	}
 	
 	@Test
+	public void test3ProductGetOneByName() {
+		Product productInDb = productService.getOne(products.get(0).getName());
+	}
+	
+	@Test
 	public void test3DeleteAll() {
-		
 		List<Store> stores = storeService.getAll();
 		Store storeInDb = stores.get(0);
 		storeService.delete(storeInDb.getId());

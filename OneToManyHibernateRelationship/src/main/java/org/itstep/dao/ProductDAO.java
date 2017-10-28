@@ -12,5 +12,7 @@ public interface ProductDAO extends JpaRepository<Product, Long>{
 	
 	@Query(value="SELECT * FROM PRODUCTS WHERE CATEGORY= ?1", nativeQuery=true)
 	public List<Product> findByCategory(String category);
-
+	
+	@Query(value="SELECT * FROM PRODUCTS WHERE NAME = ?1", nativeQuery=true)
+	public Product getOneByName(String name);
 }

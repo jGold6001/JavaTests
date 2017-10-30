@@ -34,9 +34,9 @@ public class Product implements Serializable{
 	@Column(name="CATEGORY", length=60, nullable = false)
 	private String category;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name = "STORE_ID")
-        private Store store;
+    private Store store;
 	
 	public Product() {
 		// TODO Auto-generated constructor stub

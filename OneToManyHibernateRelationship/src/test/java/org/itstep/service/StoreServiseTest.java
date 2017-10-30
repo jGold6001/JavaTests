@@ -63,8 +63,7 @@ public class StoreServiseTest {
 	@Test
 	public void test2GetOneByName() {
 		Store storeInDb = storeService.getOne(store.getName());
-		assertEquals(storeInDb.getName(), store.getName());
-		//4
+		Product productInDb = productService.getOne(product.getName());
 	}
 	
 	

@@ -12,23 +12,30 @@ import org.springframework.stereotype.Service;
 public class StoreServiceImpl implements StoreService {
 
 	@Autowired
-	private StoreDAO stroreDAO;
+	private StoreDAO storeDAO;
 	
+	@Override
 	public Store createOrUpdate(Store store) {
-		return stroreDAO.saveAndFlush(store);
+		return storeDAO.saveAndFlush(store);
 	}
 
+	@Override
 	public void delete(long id) {
-		stroreDAO.delete(id);
+		storeDAO.delete(id);
 	}
 
+	@Override
 	public Store getOne(long id) {
-		return stroreDAO.getOne(id);
+		return storeDAO.getOne(id);
+	}
+	
+	@Override
+	public Store getOne(String name) {
+		return storeDAO.getOneByName(name);
 	}
 
 	@Override
 	public List<Store> getAll() {
-		return stroreDAO.findAll();
+		return storeDAO.findAll();
 	}
-
 }

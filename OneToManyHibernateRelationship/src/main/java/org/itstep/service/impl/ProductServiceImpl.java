@@ -14,14 +14,17 @@ public class ProductServiceImpl implements ProductService {
 	@Autowired
 	private ProductDAO productDAO;
 	
+	@Override
 	public Product createOrUpdate(Product product) {
 		return productDAO.saveAndFlush(product);
 	}
 
+	@Override
 	public void delete(long id) {
 		productDAO.delete(id);
 	}
 
+	@Override
 	public Product getOne(long id) {
 		return productDAO.getOne(id);
 	}

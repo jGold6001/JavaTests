@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.itstep.App;
 import org.itstep.dao.pojo.Product;
@@ -33,6 +34,7 @@ public class StoreServiseTest {
 	
 	private Store store;
 	private List<Product> products;
+	private Product product;
 	
 	@Before
 	public void setData() {
@@ -42,6 +44,7 @@ public class StoreServiseTest {
 				new Product("Apple iPone 5", "Cellphone"),
 				new Product("Huawei MediaPad T3", "Table")
 		);
+		product = products.get(0);
 	}
 	
 	
@@ -58,9 +61,11 @@ public class StoreServiseTest {
 	}
 	
 	@Test
-	public void test3ProductGetOneByName() {
-		Product productInDb = productService.getOne(products.get(0).getName());
+	public void test2GetOneByName() {
+		Store storeInDb = storeService.getOne(store.getName());
+		assertEquals(storeInDb.getName(), store.getName());
 	}
+	
 	
 	@Test
 	public void test3DeleteAll() {

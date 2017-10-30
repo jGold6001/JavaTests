@@ -36,7 +36,7 @@ public class Product implements Serializable{
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "STORE_ID")
-    private Store store;
+        private Store store;
 	
 	public Product() {
 		// TODO Auto-generated constructor stub

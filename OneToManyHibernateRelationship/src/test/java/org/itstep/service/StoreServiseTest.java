@@ -64,6 +64,7 @@ public class StoreServiseTest {
 	public void test2GetOneByName() {
 		Store storeInDb = storeService.getOne(store.getName());
 		assertEquals(storeInDb.getName(), store.getName());
+		//4
 	}
 	
 	
